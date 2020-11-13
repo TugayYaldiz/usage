@@ -74,6 +74,8 @@ abstract class Analytics {
   /// for custom dimensions, etc.
   Future sendScreenView(String viewName, {Map<String, String> parameters});
 
+  Future sendRaw(String hitType, Map<String, dynamic> args);
+
   /// Sends an Event hit to Google Analytics. [label] specifies the event label.
   /// [value] specifies the event value. Values must be non-negative.
   ///
@@ -224,6 +226,11 @@ class AnalyticsMock implements Analytics {
     parameters ??= <String, String>{};
     parameters['viewName'] = viewName;
     return _log('screenView', parameters);
+  }
+
+  @override
+  Future sendRaw(String hitType, Map<String, dynamic> args) {
+    return _log('sendRaw', args);
   }
 
   @override
