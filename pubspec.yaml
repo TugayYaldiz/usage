@@ -8,7 +8,7 @@ description: A Google Analytics wrapper for command-line, web, and Flutter apps.
 homepage: https://github.com/dart-lang/usage
 
 environment:
-  sdk: ">=2.0.0 <3.0.0"
+  sdk: ">=2.10.0-0 <3.0.0"
 
 dependencies:
   path: ^1.8.0-nullsafety
