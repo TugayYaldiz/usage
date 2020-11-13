@@ -219,6 +219,7 @@ class AnalyticsImpl implements Analytics {
   ///
   /// Valid values for [hitType] are: 'pageview', 'screenview', 'event',
   /// 'transaction', 'item', 'social', 'exception', and 'timing'.
+  @override
   Future sendRaw(String hitType, Map<String, dynamic> args) {
     return _sendPayload(hitType, args);
   }
